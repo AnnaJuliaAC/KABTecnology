@@ -1,0 +1,348 @@
+/* Importando a fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Configurações iniciais para todos os elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;/*utilizada para alterar a propriedade padrão da box model, usada para calcular larguras  e alturas  dos elementos*/
+  font-family: 'Poppins',sans-serif;
+}
+
+/* Configurações para o corpo do documento */
+/* Vw medida usada para altura e largura serem igual */
+body {
+     background:linear-gradient(#000000 0%,#303030 40%);
+     min-height: 100vh; /*usado para definir a altura mínima de um determinado elemento.*/
+     overflow-x: hidden; /*tratar conteúdos que ultrapassam os limites de um elemento na horizontal*/
+}
+
+/* Configurações para o cabeçalho */
+header {
+ position: absolute;
+ top: 0;/*recurso usado para ordenar os elementos HTML de uma página web, como sites, redes sociais e blogs*/
+ left: 0;
+ width: 100%;
+ padding: 30px 100px;/*é responsável por definir uma distância interna entre um elemento e sua borda.*/
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ z-index: 100;
+
+}
+
+/* Configurações para o logotipo */
+.logo {
+ color: #143E71;
+ cursor: default;
+ width: auto;
+ height: 60px;
+}
+
+/* Configurações para os links da navegação */
+.navbar a{
+    color: #B2B2B2;
+    text-decoration: none;
+    margin: left 20px;
+    font-weight: 600;
+    padding: 6px 15px;
+    border-radius: 20px;
+
+}
+
+/* Configurações para os links da navegação quando o mouse estiver sobre eles */
+.navbar a:hover,
+.navbar a:active{
+    background: #143e71a7;
+}
+
+/* Configurações para o efeito de parallax */
+.parallax{
+
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.parallax img{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events:none;
+
+}
+
+/* Configurações para a seção */
+.sec{
+    position: relative;
+    padding: 30px; /* tamanho do bloco fixo*/
+    background: #303030;
+    background:linear-gradient(#000000 0%,#303030 80%);
+
+}
+
+.sec1{
+    font-size: 50px;
+    position: relative;
+    padding: 300px; /* tamanho do bloco fixo*/
+    background: #303030;
+    background-image: url('img/fundokab.png');
+    background-repeat: no-repeat;
+    background-size:2000px;
+}
+
+/* Configurações para o título da seção */
+.sec h2{
+    font-size: 4em;
+    color: #143E71;
+    margin-bottom: 10px;
+    font-weight: bold;
+
+}
+
+/* Configurações para o subtítulo da seção */
+.sec h3{
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 10px;
+    
+}
+
+/* Configurações para o texto da seção */
+.sec p{
+    font-size: 23px;
+    color: #fff;
+    font-weight: 300;
+    
+}
+
+.imglogo{
+    height: 50px;
+    width: 50px;
+
+}
+
+.img-mis-vis-val{
+    height: 250px;
+    width: 250px;
+}
+
+/* Estilo básico do menu */
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline-block;
+    position: relative;
+}
+
+.menu li a {
+    display: block;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: #fff;
+    
+}
+
+/* Estilo do menu dropdown */
+.menu li ul {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 0;
+    
+}
+
+.menu li:hover ul {
+    display: block;
+    
+}
+
+.menu li ul li {
+    display: block;
+}
+
+.menu li ul li a {
+    padding: 5px;
+    color: #000;
+}
+
+.submenu {
+    width: 210px;
+}
+
+
+.faq{
+background-color: #303030;
+}
+.faq2{
+    background-color: #143E71;
+    font-size: 20px;
+    }
+
+.mvv{
+    display: inline-block; 
+}
+.mvv1{
+    float: left;
+    width: max-content;
+}
+.mvv2{
+    float: left;
+    width: max-content;
+}
+.mvv3{
+    float: left;
+    width: max-content;
+}
+.txtcolor{
+    color: #fff;
+
+}
+.oi{
+    font-size: 20px;
+}
+.container{
+    font-size: 20px;
+}
+
+
+
+
+
+
+.title_contato {
+    /* font-family: 'open_sansregular'; */
+    /* font-weight: 600; */
+    font-size:3em;
+    color: #143E71;
+    font-weight: bold;
+    /* text-align: left; */
+    margin-bottom:10px;
+}
+input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
+  
+  font-size: 0.8em;
+  color: #fff;
+  top: -11px;
+  -webkit-transition: all 0.225s ease;
+  transition: all 0.225s ease;
+  background: #143E71;
+  padding: 3px 8px;
+  left: 25px;
+  border-radius: 50px;
+  font-weight: bold;
+}
+.style-form-input {
+    float: left;
+    width: 295px;
+    margin: 1em 0;
+    position: relative;
+    border-radius: 4px;
+}
+.right { float:right; }
+@media only screen and (max-width: 768px){
+    
+  .style-form-input { width:100%; }
+}
+.style-form-input label {
+    color: #999;
+    padding: 1.3rem 30px 1rem 30px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    pointer-events: none;
+}
+.style-form-input.full { 
+    width: 650px;
+    max-width: 100%;
+    color: rgb(255, 255, 255);
+}
+input,
+textarea {
+    width: 100%;
+    padding: 30px;
+    border: 0;
+    font-size: 1em;
+    background-color: #2d2d2d;
+    color: #fff;
+    border-radius: 50px;
+}
+input:focus,
+textarea:focus { outline: 0; }
+input:focus ~ span,
+textarea:focus ~ span {
+    width: 100%;
+    -webkit-transition: all 0.075s ease;
+    transition: all 0.075s ease;
+}
+textarea {
+    width: 100%;
+    min-height: 10em;
+}
+.input-container {
+    width: 650px;
+    max-width: 100%;
+    margin: 20px auto 25px auto;
+}
+.btn-submit {
+    width: 160px;
+    color: #fff;
+    font-size: 1.2em;    
+    float: left;
+    text-align: center;
+    padding: 15px 35px;
+    border-radius: 60px;
+    display: inline-block;
+    background-color: #143E71;
+    cursor: pointer;
+    box-shadow: 0 2px 5px 0 #0000004c, 0 2px 10px 0 rgba(0,0,0,0.07);
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+    border:none;
+}
+.btn-submit:hover {
+    
+    transform: translateY(1px);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.10),
+    0 1px 1px 0 rgba(0,0,0,0.09);
+}
+@media (max-width: 768px) {
+    
+    .btn-submit {
+        
+      width:100%;
+      float: none;
+      text-align:center;
+    
+    }
+}
+input[type=checkbox] + label {
+  color: #ccc;
+  font-style: italic;
+} 
+input[type=checkbox]:checked + label {
+  color: #f00;
+  font-style: normal;
+}
+
+.perguntas{
+    color: #ccc;
+}
+form{
+
+    width: 700px;
+
+}
+
